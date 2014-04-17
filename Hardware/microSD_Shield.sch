@@ -22290,7 +22290,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="P+5" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+6" library="SparkFun" deviceset="3.3V" device=""/>
 <part name="P+7" library="SparkFun" deviceset="3.3V" device=""/>
-<part name="LOGO2" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".1_INCH"/>
+<part name="LOGO2" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".6_INCH" value="SFE_LOGO_FLAME.6_INCH"/>
 </parts>
 <sheets>
 <sheet>
@@ -22344,8 +22344,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="JP3" gate="G$1" x="226.06" y="33.02"/>
 <instance part="U$1" gate="G$1" x="148.59" y="6.604"/>
 <instance part="LOGO1" gate="G$1" x="236.22" y="27.94"/>
-<instance part="SJ1" gate="1" x="88.9" y="119.38"/>
-<instance part="SJ2" gate="1" x="88.9" y="104.14"/>
+<instance part="SJ1" gate="1" x="93.98" y="114.3"/>
+<instance part="SJ2" gate="1" x="93.98" y="99.06"/>
 <instance part="J1" gate="G$1" x="175.26" y="58.42"/>
 <instance part="C1" gate="G$1" x="236.22" y="139.7"/>
 <instance part="C2" gate="G$1" x="175.26" y="99.06"/>
@@ -22356,7 +22356,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="P+5" gate="G$1" x="7.62" y="175.26"/>
 <instance part="P+6" gate="G$1" x="175.26" y="106.68"/>
 <instance part="P+7" gate="G$1" x="236.22" y="147.32"/>
-<instance part="LOGO2" gate="G$1" x="137.16" y="15.24"/>
+<instance part="LOGO2" gate="G$1" x="116.332" y="14.986"/>
 </instances>
 <busses>
 </busses>
@@ -22707,8 +22707,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="SJ1" gate="1" pin="2"/>
-<wire x1="93.98" y1="119.38" x2="101.6" y2="119.38" width="0.1524" layer="91"/>
-<label x="101.6" y="119.38" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="99.06" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
+<label x="106.68" y="114.3" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="A5" class="0">
@@ -22724,8 +22724,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="SJ2" gate="1" pin="2"/>
-<wire x1="93.98" y1="104.14" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
-<label x="101.6" y="104.14" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="99.06" y1="99.06" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
+<label x="106.68" y="99.06" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="RES" class="0">
@@ -22872,8 +22872,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="U2" gate="G$1" pin="SDA"/>
 <wire x1="68.58" y1="124.46" x2="78.74" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="124.46" x2="78.74" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="119.38" x2="83.82" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="124.46" x2="78.74" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="114.3" x2="88.9" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="SJ1" gate="1" pin="1"/>
 </segment>
 <segment>
@@ -22886,8 +22886,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="U2" gate="G$1" pin="SCL"/>
 <wire x1="68.58" y1="121.92" x2="73.66" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="121.92" x2="73.66" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="104.14" x2="83.82" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="121.92" x2="73.66" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="99.06" x2="88.9" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="SJ2" gate="1" pin="1"/>
 </segment>
 <segment>
