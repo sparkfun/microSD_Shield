@@ -5,6 +5,9 @@
  
  modified 18 Sep 2014
  by Bobby Chan @ SparkFun Electronics Inc.
+
+ modified 26 Jun 2015
+ by Charles Galant
  
  SD Card Datalogger
  
@@ -22,12 +25,14 @@
  ** MOSI - pin 11
  ** MISO - pin 12
  ** CLK - pin 13
- ** CS - pin 4
+ ** CS - pin 8
  
  This example code is in the public domain.
  */
 
+
 #include <SD.h>
+#include <SPI.h>
 
 // On the Ethernet Shield, CS is pin 4. Note that even if it's not
 // used as the CS pin, the hardware CS pin (10 on most Arduino boards,
@@ -61,8 +66,6 @@ void setup()
 
 void loop()
 {
-  // make a string for assembling the data to log:
-  String dataString = "";
 
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
@@ -72,13 +75,14 @@ void loop()
 
   // if the file is available, write to it:
   if (dataFile)   {  
-    int timeStamp = millis();
+    unsigned long timeStamp = millis();
     //write to uSD card
     dataFile.print(timeStamp);
     dataFile.print(" ms");
     dataFile.print(", ");
     //output also on Serial monitor for debugging
     Serial.print(timeStamp);
+    Serial.print(" ms");
     Serial.print(",");
 
     // read three sensors on A0, A1, and A2 while appending to the string:
@@ -86,7 +90,7 @@ void loop()
     {
       int sensorVal = analogRead(analogPin);
       //write analog sensor data to uSD card
-      dataFile.print(" Analog Pin A");
+      dataFile.print("Analog Pin A");
       dataFile.print(analogPin);
       dataFile.print(" = ");
       dataFile.print(sensorVal);
@@ -96,9 +100,10 @@ void loop()
       Serial.print(" = ");
       Serial.print(sensorVal);
       //place comma between the analog sensor data
-      if (analogPin < 3) 
+      if (analogPin < 2) 
       {
-        dataString += ","; 
+        dataFile.print(", ");
+		Serial.print(", ");
       }
     }
     dataFile.println(); //create a new row to read data more clearly
